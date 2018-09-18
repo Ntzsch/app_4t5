@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">app_4t5</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="password_again">password (again)</string>
+    <string name="username_and_password_length">24</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+</resources>
