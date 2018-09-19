@@ -21,10 +21,10 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         // TEMPORARY
         UserRecords.add_user(new User("user", "pass"));
 
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         username_text = findViewById(R.id.username_text);
         password_text = findViewById(R.id.password_text);
