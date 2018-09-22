@@ -6,7 +6,7 @@ import javax.crypto.spec.PBEKeySpec;
 import java.util.Arrays;
 
 public class User {
-    private final int hash_size = 256;    // hash size in bits
+    private static final int hash_size = 256;    // hash size in bits
     private String username;
     private byte[] salt;
     private byte[] password_hash;

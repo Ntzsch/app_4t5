@@ -1,8 +1,11 @@
 package edu.gatech.cs2340.app_4t5.models;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.HashMap;
 
 public class UserRecords {
+    private static FirebaseAuth m_auth;
     private static HashMap<String, User> users = new HashMap<>();
 
     /**
