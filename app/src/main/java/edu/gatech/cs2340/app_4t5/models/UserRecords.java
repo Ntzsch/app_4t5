@@ -17,6 +17,11 @@ public class UserRecords {
         return true;
     }
 
+    public static boolean containsUsername(String username) {
+        return users.containsKey(username);
+    }
+
+
     /**
      * @param user user to remove
      * @return true if user was removed successfully, false if otherwise

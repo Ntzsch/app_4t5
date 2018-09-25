@@ -49,4 +49,31 @@
             android:layout_height="wrap_content"
             android:text="register" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/error2"
+        android:layout_width="79dp"
+        android:layout_height="138dp"
+        android:text="Passwords Must Match!"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="300dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <TextView
+        android:id="@+id/userError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username is Taken!"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <TextView
+        android:id="@+id/success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Success!"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="484dp" />
 </android.support.constraint.ConstraintLayout>
