@@ -58,6 +58,13 @@ public class RegisterActivity extends AppCompatActivity {
                     passwordMatchError.setVisibility(View.VISIBLE);
                     registerPass.setText("");
                     registerPassAgain.setText("");
+                    new Handler().postDelayed(new Runnable () {
+                        @Override
+                        public void run() {
+                            passwordMatchError.setVisibility(View.INVISIBLE);
+                            usernameError.setVisibility(View.INVISIBLE);
+                        }
+                    }, 2000);
                 } else if (!usernameR.equals("") && passwordR1.length() > 0) {
                     if (!UserRecords.containsUsername(usernameR)) {
                         User newUser = new User(usernameR, passwordR1);
@@ -77,14 +84,6 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                 }
-            }
-        });
-
-        registerPass.setOnClickListener(new View.OnClickListener() { //doesn't work really. requires two taps
-            @Override
-            public void onClick(View view) {
-                passwordMatchError.setVisibility(View.INVISIBLE);
-                usernameError.setVisibility(View.INVISIBLE);
             }
         });
 
