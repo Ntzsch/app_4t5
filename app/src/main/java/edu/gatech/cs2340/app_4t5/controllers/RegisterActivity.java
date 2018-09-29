@@ -80,7 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        registerPass.setOnClickListener(new View.OnClickListener() {
+        registerPass.setOnClickListener(new View.OnClickListener() { //doesn't work really. requires two taps
             @Override
             public void onClick(View view) {
                 passwordMatchError.setVisibility(View.INVISIBLE);
