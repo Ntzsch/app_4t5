@@ -6,4 +6,5 @@
     <string name="username_and_password_length">24</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
+    <string name="test">Testing button</string>
 </resources>
