@@ -36,20 +36,23 @@
 
 
         <SearchView
+            android:id="@+id/searchLocation"
             android:layout_width="352dp"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="72dp" />
+        <style>
+        </style>
 
         <ListView
             android:id="@+id/listviewLocation"
             android:layout_width="match_parent"
-            android:layout_height="344dp"
+            android:layout_height="426dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="94dp"
+            android:layout_marginBottom="32dp"
             android:scrollbars="horizontal" />
     </RelativeLayout>
 

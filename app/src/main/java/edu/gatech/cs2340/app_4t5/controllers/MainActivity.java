@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.support.v7.widget.Toolbar;
+import android.widget.ListView;
 
 import edu.gatech.cs2340.app_4t5.R;
 import edu.gatech.cs2340.app_4t5.models.User;
@@ -18,11 +19,20 @@ import edu.gatech.cs2340.app_4t5.models.UserRecords;
 public class MainActivity extends AppCompatActivity{
     //private Button logout_button;
     private DrawerLayout mDrawerLayout;
+    private String[] name = {"Goodwill", "Salvation Army"};
+    private String[] addresses = {"123 Goodwill st.", "123 random street"};
+    private String[] typeOfAddresses = {"idk", "kdi"};
+    private String[] phoneNumber = {"404-905-1888", "405-437-8868"};
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.location_listview);
+
+        CustomLocationAdapter location = new CustomLocationAdapter(this, addresses, typeOfAddresses, phoneNumber, name);
+        listView = (ListView) findViewById(R.id.listviewLocation);
+        listView.setAdapter(location);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
