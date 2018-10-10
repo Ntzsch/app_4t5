@@ -55,6 +55,9 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+        /**
+         * stuff below here is the toolbar and sidebar navigation stuff
+         */
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
