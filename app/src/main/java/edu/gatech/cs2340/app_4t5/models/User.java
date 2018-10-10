@@ -6,12 +6,19 @@ import javax.crypto.spec.PBEKeySpec;
 import java.util.Arrays;
 
 public class User {
+    private UserType userType;
     private final int hash_size = 256;    // hash size in bits
     private String username;
     private byte[] salt;
     private byte[] password_hash;
 
     public User(String username, String password) {
+        this(username, password, UserType.USER);
+
+    }
+
+    public User(String username, String password, UserType userType) {
+        this.userType = userType;
         this.username = username;
         this.salt = generate_salt();
         this.password_hash = generate_pass_hash(password);
