@@ -8,9 +8,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.TextView;
 
 import edu.gatech.cs2340.app_4t5.R;
 import edu.gatech.cs2340.app_4t5.models.User;
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity{
     private String[] typeOfAddresses = {"idk", "kdi"};
     private String[] phoneNumber = {"404-905-1888", "405-437-8868"};
     ListView listView;
+    private TextView test;
+    private SearchView search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -31,10 +36,21 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.location_listview);
 
         CustomLocationAdapter location = new CustomLocationAdapter(this, addresses, typeOfAddresses, phoneNumber, name);
+
         listView = (ListView) findViewById(R.id.listviewLocation);
         listView.setAdapter(location);
+        test = (TextView) findViewById(R.id.testTouch);
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
+
+        //listens for a click on a particular location
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                    test.setText(name[position]);
+            }
+        });
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
