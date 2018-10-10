@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity{
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
         //listens for a click on a particular location
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() { //detects tap on a listview item
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                    test.setText(name[position]);
+                    test.setText(name[position]); //display location name when clicked
             }
         });
 
