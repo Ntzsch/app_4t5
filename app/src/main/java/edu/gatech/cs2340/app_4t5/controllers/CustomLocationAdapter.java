@@ -12,12 +12,17 @@ import org.w3c.dom.Text;
 import edu.gatech.cs2340.app_4t5.R;
 
 public class CustomLocationAdapter extends ArrayAdapter {
-    private final Activity context;
+    private final Activity context; //not exactly sure what context is
+    /**
+     * all the attributes below are hardcoded examples.
+     * having a location class would change all of this
+     */
     private final String[] name;
     private final String[] addresses;
     private final String[] typeOfAddress;
     private final String[] phoneNumber;
 
+    //constructor for CustomLocationAdapter
     public CustomLocationAdapter(Activity context, String[] addresses, String[] typeOfAddress, String[] phoneNumber, String[] name){
 
         super(context, R.layout.listview_row , addresses);
@@ -27,7 +32,8 @@ public class CustomLocationAdapter extends ArrayAdapter {
             this.phoneNumber = phoneNumber;
             this.name = name;
     }
-    public View getView(int position, View view, ViewGroup parent) {
+    //populates each listview_row with information from the attributes
+    public View getView(int position, View view, ViewGroup parent) { //
         LayoutInflater inflater=context.getLayoutInflater();
         View rowView=inflater.inflate(R.layout.listview_row, null,true);
 

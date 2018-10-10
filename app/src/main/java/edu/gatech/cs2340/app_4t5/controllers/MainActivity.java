@@ -22,6 +22,9 @@ import edu.gatech.cs2340.app_4t5.models.UserRecords;
 public class MainActivity extends AppCompatActivity{
     //private Button logout_button;
     private DrawerLayout mDrawerLayout;
+    /**
+     * hard coded examples below
+     */
     private String[] name = {"Goodwill", "Salvation Army"};
     private String[] addresses = {"123 Goodwill st.", "123 random street"};
     private String[] typeOfAddresses = {"idk", "kdi"};
