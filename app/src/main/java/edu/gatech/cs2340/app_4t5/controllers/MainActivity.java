@@ -22,11 +22,14 @@ import edu.gatech.cs2340.app_4t5.models.UserRecords;
 public class MainActivity extends AppCompatActivity{
     //private Button logout_button;
     private DrawerLayout mDrawerLayout;
+    /**
+     * hard coded examples below
+     */
     private String[] name = {"Goodwill", "Salvation Army"};
     private String[] addresses = {"123 Goodwill st.", "123 random street"};
     private String[] typeOfAddresses = {"idk", "kdi"};
     private String[] phoneNumber = {"404-905-1888", "405-437-8868"};
-    ListView listView;
+    private ListView listView;
     private TextView test;
     private SearchView search;
 
@@ -44,14 +47,17 @@ public class MainActivity extends AppCompatActivity{
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
         //listens for a click on a particular location
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() { //detects tap on a listview item
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
-                    test.setText(name[position]);
+                    test.setText(name[position]); //display location name when clicked
             }
         });
 
+        /**
+         * stuff below here is the toolbar and sidebar navigation stuff
+         */
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
