@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity{
     private String[] addresses = {"123 Goodwill st.", "123 random street"};
     private String[] typeOfAddresses = {"idk", "kdi"};
     private String[] phoneNumber = {"404-905-1888", "405-437-8868"};
-    ListView listView;
+    private ListView listView;
     private TextView test;
     private SearchView search;
 
